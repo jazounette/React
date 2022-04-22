@@ -20,11 +20,3 @@ function Grabouilla(state = INITIAL_STATE, action){
 }
 
 export default Grabouilla
-
-
-// articlez:[ {titre:"react", article: "c'est un framework conçu par facebook"}, 
-// {titre:"bootstrap", article: "c'est un framework conçu par twitter"},
-// {titre:"angular", article: "développé par Google et la communauté Angular"},
-// {titre:"Vue.JS", article: "framework open source crée par Evan You"},
-// {titre:"Laravel", article: "framework open source en PHP crée par Taylor Otwell"},
-// {titre:"Symfony", article: "ensemble de composant PHP, créateur: Fabien Potencier (cocorico!!)"},  ]

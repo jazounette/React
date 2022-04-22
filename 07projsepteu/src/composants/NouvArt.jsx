@@ -8,16 +8,19 @@ const NouvArt = () => {
     var [titrexx, setTitre] = useState();
     var [articlexx, setArticle] = useState();
     const articles = useSelector(state => state.articlez)
-
+    
     const dispatch = useDispatch();
     const AddArticle = () => {
         dispatch({  type: "ADDART",  payload: {titre: titrexx, article: articlexx}  })
         dispatch({  type: "VUE",  payload: 1  })
+        
+        console.log (articles);
 
-        // console.log (articles);
-        // console.log ({ ...articles });
-        // const myJSON = JSON.stringify({articles});
-        // localStorage.setItem("articlesJSON", myJSON);
+        articles.push({titre: titrexx, article: articlexx});
+        const myJSON = JSON.stringify(articles);
+        localStorage.setItem("articlesJSON", myJSON);
+
+        // ResetStorage();
     }
 
     function GérageTitreChange(e){  titrexx = e.target.value }
@@ -40,4 +43,19 @@ const NouvArt = () => {
     );
 };
 
+
 export default NouvArt;
+
+
+
+// function ResetStorage(){
+//     const articlez = [ {titre:"react", article: "c'est un framework conçu par facebook"}, 
+//                 {titre:"bootstrap", article: "c'est un framework conçu par twitter"},
+//                 {titre:"angular", article: "développé par Google et la communauté Angular"},
+//                 {titre:"Vue.JS", article: "framework open source crée par Evan You"},
+//                 {titre:"Laravel", article: "framework open source en PHP crée par Taylor Otwell"},
+//                 {titre:"Symfony", article: "ensemble de composant PHP, créateur: Fabien Potencier (cocorico!!)"},  ]
+    
+//     const myJSON = JSON.stringify(articlez);
+//     localStorage.setItem("articlesJSON", myJSON);
+// }

@@ -5,11 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-// import CompteurReducer from './réducteurs/CompteurReducer';
 import RéduitKiki from './réducteurs/RéduitKiki';
 // import store from './store/store';
 
-// const store = configureStore({reducer:CompteurReducer});
 const store = configureStore({reducer:RéduitKiki});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

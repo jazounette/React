@@ -16,7 +16,10 @@ code {
 
 .menu { text-align: center; background-color: darkblue; }
 .logreact { display: inline-block; }
-.lienmenu { padding: 11px 22px;  display: inline-block;  }
+.lienmenu { padding: 12px;  border-radius: 5px;  }
 a:link { text-decoration: none; }
+a:visited { color: white;  }
 .lienmenu:hover { background-color: white; text-decoration: none; }
-.carte { display: inline-block; border: 1px solid black; width: 222px; }
+
+.carteT { text-overflow: ellipsis;  white-space: nowrap;  overflow: hidden; }
+.carteP { height: 99px; overflow: hidden; text-overflow: ellipsis; }

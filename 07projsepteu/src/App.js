@@ -5,18 +5,17 @@ import Maison from './composants/Maison';
 import Contact from './composants/Contact';
 import NouvArt from './composants/NouvArt';
 import { useDispatch, useSelector } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
-  console.log ("je passe ici au départ et c'est tout");
+  
+  let text = localStorage.getItem("articlesJSON");
+  let titotable = JSON.parse(text);
+  console.log (titotable);
 
-  
-  
-  // let text = localStorage.getItem("articlesJSON");
-  // let titotable = JSON.parse(text);
-  // console.log (titotable);
-  // const dispatch = useDispatch();
-  // dispatch({  type: "ARTICLEZ",  payload: titotable  });
+  const dispatch = useDispatch();
+  dispatch({  type: "ARTICLEZ",  payload: titotable  });
 
   return (
     <BrowserRouter>

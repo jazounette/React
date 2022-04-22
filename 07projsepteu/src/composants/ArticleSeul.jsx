@@ -22,11 +22,22 @@ const ArticleSeul = ( {titre, article, id}) => {
     }
     
     return (
-        <div className='carte'>
-            <h3>{id} - {titre}</h3>
-            <p>{article}</p>
-            <button id={id} onClick={quikaclick}>Lire Article</button>
+    <div className='col-3'>
+        <div className="card mb-3">
+            <div className="card-header carteT">
+            {id} - {titre}
+            </div>
+            <div className="card-body">
+                {/* <h5 class="card-title">{id} - {titre}</h5> */}
+                <p className="card-text carteP">{article}</p>
+                <a id={id} onClick={quikaclick} className="btn btn-primary">Lire</a>
+            </div>
         </div>
+    </div>
+
+        //     <h3 className='text-center'>{id} - {titre}</h3>
+        //     <p className='carteP'>{article}</p>
+        //     <div><button className='carteB' id={id} onClick={quikaclick}>Lire Article</button></div>
     );
 };
 

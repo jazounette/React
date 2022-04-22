@@ -15,7 +15,7 @@ const Maison = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
             {/* <h3>je suis le composant maison</h3> */}
             {prout(vue)}
         </div>
