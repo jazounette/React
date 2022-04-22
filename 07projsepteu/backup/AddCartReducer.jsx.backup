@@ -1,0 +1,13 @@
+const INITIAL_STATE = {
+    cart:90
+}
+
+function AddCartDataFunc(state = INITIAL_STATE, action){
+    switch(action.type){
+        case "ADDCART" : return { ...state, cart: action.payload  }
+        default: { return state }
+
+    }
+}
+
+export default AddCartDataFunc

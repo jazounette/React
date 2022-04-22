@@ -1,0 +1,48 @@
+import React from 'react';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+const Compteur = () => {
+
+    const count = useSelector(state => state.count)
+    const cart = useSelector(state => state.cart)
+
+    const [cartData, setCartData] = useState(0);
+
+    const dispatch = useDispatch();
+
+    const incrFunc = () => {
+        dispatch({
+            type: "INCR"
+        })
+    }
+    const decrFunc = () => {
+        dispatch({
+            type: "DECR"
+        })
+    }
+
+    const addCartDateFunc = () => {
+        dispatch({
+            type: "ADDCART",
+            payload: cartData
+        })
+
+    }
+
+    return (
+        <div>
+            <h1>Compteur: {count}</h1>
+            <button className='but01' onClick={incrFunc}>+1</button>
+            <button className='but01' onClick={decrFunc}>-1</button>
+            <h1>Panier: {cart}</h1>
+            <input value={cartData} onChange={e => setCartData(e.target.value)} type="number" />
+            <br/>
+            <button className='but02' onClick={addCartDateFunc}>Add to Cart</button>
+
+
+        </div>
+    );
+};
+
+export default Compteur;

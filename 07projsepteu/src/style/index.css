@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: darkgreen;
+  /* text-align: center; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.menu { text-align: center; background-color: darkblue; }
+.logreact { display: inline-block; }
+.lienmenu { padding: 11px 22px;  display: inline-block;  }
+a:link { text-decoration: none; }
+.lienmenu:hover { background-color: white; text-decoration: none; }
+.carte { display: inline-block; border: 1px solid black; width: 222px; }
