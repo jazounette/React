@@ -31,21 +31,28 @@ const NouvArt = () => {
         AddArticle();
     }
     return (
-        <div>
-            <h3>ÉCRIVEZ UN ARTICLE</h3>
-            <label htmlFor="titre">Titre</label><br/>
-            <input id="titre" placeholder='Le titre de votre article' value={titrexx} onChange={GérageTitreChange}></input><br/>
-            <label htmlFor="article">Votre article</label><br/>
-            <textarea id="article" placeholder='Tapé votre article ici' value={articlexx} onChange={GérageArticleChange}></textarea><br/>
-            <button onClick={quikaclick}><NavLink to ="/maison">Envoyer</NavLink></button>
-            
+    <div className='container mt-5'>
+    <div className='row shadow bg-info rounded'>
+        <div className='col-12 text-center mt-4'><h3>ÉCRIVEZ UN ARTICLE</h3></div>
+        <div className='col-6 offset-3'>
+            <form>
+                <div className="form-group mt-2">
+                    <label htmlFor="titre">Titre</label>
+                    <input type="text" className="form-control" id="titre" placeholder="Le titre de votre article" value={titrexx} onChange={GérageTitreChange}></input>
+                </div>
+                <div className="form-group mt-2">
+                    <label htmlFor="article">Votre article</label>
+                    <textarea className="form-control" id="article" rows="6" placeholder='Tapé votre article ici' value={articlexx} onChange={GérageArticleChange}></textarea>
+                </div>
+                <button className='btn btn-primary mt-2 mb-4' onClick={quikaclick}><NavLink to ="/maison">Envoyer</NavLink></button>
+            </form>
         </div>
+    </div>
+    </div>
     );
 };
 
-
 export default NouvArt;
-
 
 
 // function ResetStorage(){

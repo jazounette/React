@@ -6,7 +6,7 @@ const MenuDuJour = () => {
     const dispatch = useDispatch();
     function quikaclick(){  dispatch(  {type:"VUE",  payload:1} )   }
     return (
-        <div className='container-fluid menu'>
+        <div className='container-fluid sticky-top menu'>
             <div className='row'>
                 <div className='logreact col-1'><img src="logo192.png" className="App-logo" alt="logo"/></div>
                 <div className='col-2 offset-2' onClick={quikaclick}><NavLink to ="/maison"><div className='lienmenu'>ACCUEIL</div></NavLink></div>

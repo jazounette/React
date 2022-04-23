@@ -20,10 +20,10 @@ const ArticleDétail = () => {
     }
 
     return (
-        <div>
-            <h3>{id} - {titre}</h3>
-            <p>{article}</p>
-            <button onClick={quikaclick}>Retour</button>
+        <div className='row mt-4 shadow bg-white rounded'>
+            <div className='text-center bg-info rounded'><h3>{id} - {titre}</h3></div>
+            <div className='bg-'><p>{article}</p></div>
+            <button className='btn btn-primary' onClick={quikaclick}>Retour</button>
         </div>
     );
 };
